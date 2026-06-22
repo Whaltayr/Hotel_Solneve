@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="logo">Hotel Solvene</h1>
+        <nav class="navbar">
+            <ul class="nav_links">
+                <li><a class="link_navbar" href="#home">Serviços</a></li>
+                <li><a class="link_navbar" href="#about">Porquê Nôs</a></li>
+                <li><a class="link_navbar" href="#services">Galeria</a></li>
+                <li><a class="link_navbar" href="#contact">FAQ</a></li>
+                <li><a class="link_navbar" href="#contact">Contato</a></li>
+            </ul>
+
+            <div class="action_button_header">
+                <li>+351 275 323 001</li>
+                <select name="language" id="language">
+                    <option value="pt">PT</option>
+                    <option value="en">EN</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="home_container">
+                <div class="side-one">
+                    <p class="hotel-category">
+                        <img src="assets/star.svg" height="20" alt=""> <img src="assets/star.svg" height="20" alt="">
+                        <img src="assets/star.svg" height="20" alt=""> Hotel 3 Estrelas · Covilhã, Portugal
+                    </p>
+                    <h1 class="hotel-title">O Seu Refúgio
+                        <span class="highlight">na Montanha</span> Espera
+                    </h1>
+                    <p class="hotel-description">Localizado na Serra da Estrela, no coração de Covilhã — quartos
+                        confortáveis, hospitalidade genuína e
+                        o melhor da montanha portuguesa.</p>
+                    <p class="hotel-rating">
+                        <img src="assets/star.svg" height="20" alt=""> 4.0 Nota Google
+                        | +1.000 Avaliações
+                    </p>
+                </div>
+                <div class="side-two">
+                    <div class="booking-container">
+                        <div class="booking-header">
+                            <h2>Verificar Disponibilidade</h2>
+                            <p>Preencha os seus dados e confirmamos a sua reserva.</p>
+                        </div>
+                        <form class="booking-form" action="#" method="POST">
+                            <!-- Nome Completo -->
+                            <div class="form-group">
+                                <label for="nome">Nome Completo</label>
+                                <input type="text" id="nome" name="nome" placeholder="Ex: João Silva" required>
+                            </div>
+                            <!-- Linha Dupla: Email e Telefone -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefone">Telefone</label>
+                                    <input type="tel" id="telefone" name="telefone" placeholder="9xx xxx xxx" required>
+                                </div>
+                            </div>
+                            <!-- Linha Dupla: Entrada e Saída -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="entrada">Entrada</label>
+                                    <input type="date" id="entrada" name="entrada" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="saida">Saída</label>
+                                    <input type="date" id="saida" name="saida" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="hospedes">Hóspedes</label>
+                                    <div class="select-wrapper">
+                                        <select id="hospedes" name="hospedes" required>
+                                            <option value="" disabled selected hidden>Selecione a quantidade</option>
+                                            <option value="1">1 Hóspede</option>
+                                            <option value="2">2 Hóspedes</option>
+                                            <option value="3">3 Hóspedes</option>
+                                            <option value="4">4 Hóspedes</option>
+                                            <option value="5">5 Hóspedes</option>
+                                            <option value="6">6 Hóspedes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Seleção de Hóspedes -->
+                            <!-- Mensagem Opcional -->
+                            <div class="form-group">
+                                <label for="mensagem">Mensagem (opcional)</label>
+                                <textarea id="mensagem" name="mensagem" rows="4"
+                                    placeholder="Algum pedido especial ou dúvida?"></textarea>
+                            </div>
+                            <!-- Botão de Envio -->
+                            <button type="submit" class="btn-submit">Pedir Reserva</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="things">
+            <div class="card"><img src="assets/medal.svg" height="20px" alt="">
+                <p>Hotel 3 Estrelas</p>
+            </div>
+            <div class="card"><img src="assets/star-em.svg" height="20px" alt="">
+                <p>Nota 4.0 no Google</p>
+            </div>
+            <div class="card"><img src="assets/message.svg" height="20px" alt="">
+                <p>+1.000 Avaliações</p>
+            </div>
+            <div class="card"><img src="assets/wifi.svg" height="20px" alt="">
+                <p>Wi-Fi Gratuito</p>
+            </div>
+            <div class="card"><img src="assets/car.svg" height="20px" alt="">
+                <p>Estacionamento Grátis
+                </p>
+            </div>
+            <div class="card"><img src="assets/location.svg" height="20px" alt="">
+                <p>Centro de Covilhã</p>
+            </div>
+
+        </section>
+            <section id="services">
+                <h2 class="services_title">Os Nossos Serviços</h2>
+                <h1 class="services_subtitle">Tudo o Que Precisa para uma Estadia Perfeita</h1>
+                <p class="service_desc">De quartos confortáveis a refeições saborosas e comodidades práticas — pensámos em
+                    tudo para que apenas precise de relaxar.</p>
+
+                <div class="cards-service">
+                    <div class="card-service">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        <div class="content">
+                            <h3>Alojamento Confortável</h3>
+                            <p>Quartos limpos e climatizados pensados para um descanso verdadeiro — seja para um fim de semana
+                                ou uma estadia mais longa.</p>
+                        </div>
+                    </div>
+                    <div class="card-service">
+                        <img src="https://images.unsplash.com/photo-1504708706948-13d6cbba4062?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        <div class="content">
+                            <h3>Pequeno-Almoço
+                            </h3>
+                            <p>Comece o dia com uma mesa generosa de pão fresco, pastéis, queijos regionais e café quente.</p>
+                        </div>
+                    </div>
+                    <div class="card-service">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        <div class="content">
+                            <h3>Wi-Fi Gratuito</h3>
+                            <p>Mantenha-se ligado em todo o hotel com Wi-Fi de alta velocidade gratuito em todos os quartos e
+                                áreas comuns.</p>
+                        </div>
+                    </div>
+
+                    <div class="card-service">
+                        <img src="https://images.unsplash.com/photo-1621929747188-0b4dc28498d2?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        <div class="content">
+                            <h3>Estacionamento Grátis</h3>
+                            <p>Chegue sem preocupações com estacionamento gratuito no hotel — sem custos extra, sem stress.</p>
+                        </div>
+                    </div>
+                    <div class="card-service">
+
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        <div class="content">
+                            <h3>Restaurante no Hotel</h3>
+                            <p>O Restaurante Solneve serve refeições portuguesas reconfortantes num ambiente descontraído e acolhedor.</p>
+                        </div>
+                    </div>
+                    <div class="card-service">
+                        <img src="https://images.unsplash.com/photo-1545483656-1a34ae73add1?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        <div class="content">
+                            <h3>Instalações Acessíveis
+                            </h3>
+                            <p>Comprometidos com o conforto de todos, dispomos de quartos e instalações acessíveis em todo o hotel.</p>
+                        </div>
+                    </div>
+     
+
+
+                </div>
+            
+            </section>
+        <section id="about">
+            <h4>Porquê Nôs</h4>
+            <h1></h1>
+        </section>
+
+
+        <section id="contact">
+            <h2>FAQ</h2>
+            <h2>Contato</h2>
+        </section>
+    </main>
+
+</body>
+
+</html>

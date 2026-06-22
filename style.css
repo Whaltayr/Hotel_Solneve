@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --font-title: "Libre Baskerville", serif;
+  --font-text: "Inter", sans-serif;
+}
+body {
+  font-family: var(--font-text);
+}
+
+header {
+  max-height: 80px;
+  justify-content: space-between;
+  padding: 20px;
+  display: flex;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.139);
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 900;
+}
+
+header .navbar {
+  display: flex;
+  gap: 3rem;
+}
+
+header > nav > ul.nav_links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  list-style: none;
+}
+header > nav > ul.nav_links li a {
+  text-decoration: none;
+  color: hsl(0, 0%, 93%);
+  font-family: var(--font-text);
+  font-weight: 600;
+}
+
+.action_button_header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#home {
+  background-image: url(assets/dd.jpg);
+
+  min-height: 100vh;
+  min-width: 94vw;
+  background-size: cover;
+  color: #fff;
+
+  /* 1. Switch to Grid */
+}
+#home .home_container {
+  display: grid;
+
+  /* 2. Create 2 equal columns that scale down to 0, but max out at 576px */
+  grid-template-columns: repeat(2, minmax(0, 576px));
+
+  /* 3. Center the entire grid layout inside the viewport */
+  justify-content: center;
+  align-items: center;
+
+  gap: 4rem;
+  padding: 7rem; /* Prevents content from hitting screen edges on mobile */
+}
+#home .side-one {
+  max-width: 576px;
+}
+
+#home .side-two {
+  max-width: 576px;
+}
+.hotel-category {
+  font-size: 16px;
+  color: hsla(0, 0%, 100%, 0.869);
+}
+.hotel-title {
+  font-size: 4.95rem;
+  line-height: 1;
+  font-family: var(--font-title);
+  margin-bottom: 1.6rem;
+}
+.highlight {
+  background-image: linear-gradient(#fde68ac7, #fde68a);
+  color: transparent;
+  background-clip: text;
+}
+.hotel-rating {
+  color: hsla(0, 0%, 100%, 0.869);
+}
+
+.hotel-description {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: hsla(0, 0%, 100%, 0.869);
+}
+.booking-container {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.17);
+  padding: 2rem;
+  border-radius: 20px;
+  font-family: var(--font-text);
+}
+
+@media (max-width: 992px) {
+  #home {
+    /* Switch to 1 full-width column */
+    grid-template-columns: 1fr;
+    /* Max-width for the single column layout on mobile/tablet */
+    max-width: 576px;
+    margin: 0 auto; /* Keep the single column centered */
+    gap: 2rem; /* Optionally shrink the gap on mobile */
+  }
+}
+
+.form-group input {
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.295);
+  text-indent: 1rem;
+}
+.form-row {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+
+  margin-bottom: 1rem;
+}
+.form-group input {
+  font-size: 1.1rem;
+}
+.form-group textarea {
+  min-height: 110px;
+}
+.form-row .form-group {
+  flex: 1;
+  min-width: 0; /* Evita que o flexbox quebre para fora do ecrã */
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box; /* Garante que o padding não aumente o tamanho final */
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.295);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Um bordo leve ajuda no efeito glassmorphism */
+  color: #fff; /* Cor do texto digitado */
+  padding-left: 1rem; /* Substitui o text-indent (melhor suporte para select) */
+  outline: none;
+  font-family: inherit;
+}
+
+.btn-submit {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  font-family: var(--font-text);
+  font-weight: 500;
+  background-color: #897058;
+  color: #fff;
+  border: none;
+}
+.booking-header {
+  margin-bottom: 1rem;
+  & h2 {
+    margin-bottom: 1rem;
+    font-family: var(--font-title);
+  }
+}
+
+.things {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-evenly;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.174);
+  & .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+.things .card img {
+  background-color: #e7e4e2cb;
+  padding: 0.5rem;
+  border-radius: 50pc;
+}
+/* ==========================================================================
+   SECÇÃO DE SERVIÇOS (Geral)
+   ========================================================================== */
+#services {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center; /* Centra os títulos da secção */
+}
+
+.services_title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #897058;
+  margin-bottom: 0.5rem;
+}
+
+.services_subtitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #2d3748;
+}
+
+.service_desc {
+  font-size: 1.1rem;
+  color: #718096;
+  max-width: 600px;
+  margin: 0 auto 3rem auto; /* Centra o parágrafo descritivo */
+}
+
+/* ==========================================================================
+   O GRID DOS CARTÕES (A Magia acontece aqui)
+   ========================================================================== */
+.cards-service {
+  display: grid;
+  /* Cria colunas automáticas: tamanho mínimo de 260px e máximo de 1fr (distribuição igual) */
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 2rem; /* Espaço entre os cartões */
+}
+
+/* Estilização Individual do Cartão */
+.card-service {
+  background: #ffffff; /* Podes mudar para o teu rgba(...) caso uses glassmorphism */
+
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: left; /* Alinha o texto interno do cartão à esquerda */
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #8970584f;
+  & .content{
+    padding: 1.8rem 1.7rem;
+    
+  }
+
+}
+
+/* Efeito de hover para dar vida aos cartões */
+.card-service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* CRUCIAL: Controlar as imagens/ícones */
+.card-service img {
+
+  object-fit: cover; /* Garante que tanto os SVGs quanto a foto do Unsplash caibam no quadrado */
+  margin-bottom: 0.5rem;
+}
+
+.card-service h3 {
+  font-size: 1.25rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.card-service p {
+  font-size: 0.95rem;
+  color: #718096;
+  line-height: 1.6;
+}
