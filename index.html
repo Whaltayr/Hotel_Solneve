@@ -6,32 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Solneve — Covilhã, Serra da Estrela</title>
     <link rel="stylesheet" href="style.css">
+    <base target="_blank">
 </head>
 
 <body>
 
-    <!-- ═══════════════════════════════════════
-   NAVBAR
-═══════════════════════════════════════ -->
     <nav class="navbar" id="navbar" aria-label="Navegação principal">
         <div class="nav-container">
             <div class="nav-inner">
-                <a href="#hero" class="nav-brand" onclick="scrollToSection(event,'#hero')">Hotel Solneve</a>
+                <a href="#hero" class="nav-brand" onclick="scrollToSection(event,'#hero')" data-i18n="nav.brand">Hotel
+                    Solneve</a>
 
                 <div class="nav-desktop">
-                    <button class="nav-link" onclick="scrollToSection(event,'#services')">Serviços</button>
-                    <button class="nav-link" onclick="scrollToSection(event,'#why-us')">Porquê Nós</button>
-                    <button class="nav-link" onclick="scrollToSection(event,'#gallery')">Galeria</button>
-                    <button class="nav-link" onclick="scrollToSection(event,'#faq')">FAQ</button>
-                    <button class="nav-link" onclick="scrollToSection(event,'#contact')">Contacto</button>
-                    <a href="tel:+351275323001" class="nav-phone">
-                        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2"
-                            fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72c.13.9.37 1.77.72 2.61a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.84.35 1.71.59 2.61.72A2 2 0 0 1 21.57 16.92z" />
-                        </svg>
-                        +351 275 323 001
-                    </a>
+                    <button class="nav-link" onclick="scrollToSection(event,'#services')"
+                        data-i18n="nav.services">Serviços</button>
+                    <button class="nav-link" onclick="scrollToSection(event,'#why-us')" data-i18n="nav.whyUs">Porquê
+                        Nós</button>
+                    <button class="nav-link" onclick="scrollToSection(event,'#gallery')"
+                        data-i18n="nav.gallery">Galeria</button>
+                    <button class="nav-link" onclick="scrollToSection(event,'#faq')" data-i18n="nav.faq">FAQ</button>
+                    <button class="nav-link" onclick="scrollToSection(event,'#contact')"
+                        data-i18n="nav.contact">Contacto</button>
+                    <a href="tel:+351275323001" class="nav-phone" data-i18n="nav.phone">+351 275 323 001</a>
 
                     <div class="lang-dropdown" id="langDropdown">
                         <button class="lang-toggle" onclick="toggleLang(event)" aria-haspopup="true"
@@ -97,28 +93,19 @@
         </div>
 
         <div class="nav-drawer" id="drawer" aria-hidden="true">
-            <button class="drawer-link" onclick="scrollToSection(event,'#services')">Serviços</button>
-            <button class="drawer-link" onclick="scrollToSection(event,'#why-us')">Porquê Nós</button>
-            <button class="drawer-link" onclick="scrollToSection(event,'#gallery')">Galeria</button>
-            <button class="drawer-link" onclick="scrollToSection(event,'#faq')">FAQ</button>
-            <button class="drawer-link" onclick="scrollToSection(event,'#contact')">Contacto</button>
-            <a href="tel:+351275323001" class="drawer-link drawer-link--accent">
-                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path
-                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72c.13.9.37 1.77.72 2.61a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.84.35 1.71.59 2.61.72A2 2 0 0 1 21.57 16.92z" />
-                </svg>
-                +351 275 323 001
-            </a>
+            <button class="drawer-link" onclick="scrollToSection(event,'#services')"
+                data-i18n="nav.services">Serviços</button>
+            <button class="drawer-link" onclick="scrollToSection(event,'#why-us')" data-i18n="nav.whyUs">Porquê
+                Nós</button>
+            <button class="drawer-link" onclick="scrollToSection(event,'#gallery')"
+                data-i18n="nav.gallery">Galeria</button>
+            <button class="drawer-link" onclick="scrollToSection(event,'#faq')" data-i18n="nav.faq">FAQ</button>
+            <button class="drawer-link" onclick="scrollToSection(event,'#contact')"
+                data-i18n="nav.contact">Contacto</button>
+            <a href="tel:+351275323001" class="drawer-link drawer-link--accent" data-i18n="nav.phone">+351 275 323
+                001</a>
             <a href="https://maps.google.com/?q=Hotel+Solneve+Covilhã" target="_blank" rel="noopener noreferrer"
-                class="drawer-link">
-                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                </svg>
-                Como Chegar
-            </a>
+                class="drawer-link" data-i18n="nav.directions">Como Chegar</a>
         </div>
     </nav>
 
@@ -126,72 +113,71 @@
         <section id="hero">
             <div class="home_container">
                 <div class="side-one">
-                    <p class="hotel-category">
-                        <img src="assets/star.svg" height="20" alt=""> <img src="assets/star.svg" height="20" alt="">
-                        <img src="assets/star.svg" height="20" alt=""> Hotel 3 Estrelas · Covilhã, Portugal
-                    </p>
-                    <h1 class="hotel-title">O Seu Refúgio
-                        <span class="highlight">na Montanha</span> Espera
-                    </h1>
-                    <p class="hotel-description">Localizado na Serra da Estrela, no coração de Covilhã — quartos
-                        confortáveis, hospitalidade genuína e
-                        o melhor da montanha portuguesa.</p>
-                    <p class="hotel-rating">
-                        <img src="assets/star.svg" height="20" alt=""> 4.0 Nota Google
-                        | +1.000 Avaliações
-                    </p>
+                    <p class="hotel-category" data-i18n="hero.category">Hotel 3 Estrelas · Covilhã, Portugal</p>
+                    <h1 class="hotel-title">O Seu Refúgio <span class="highlight" data-i18n="hero.highlight">na
+                            Montanha</span> Espera</h1>
+                    <p class="hotel-description" data-i18n="hero.description">Localizado na Serra da Estrela, no coração
+                        de Covilhã — quartos confortáveis, hospitalidade genuína e o melhor da montanha portuguesa.</p>
+                    <p class="hotel-rating" data-i18n="hero.rating">4.0 Nota Google | +1.000 Avaliações</p>
                 </div>
                 <div class="side-two">
                     <div class="booking-container">
                         <div class="booking-header">
-                            <h2>Verificar Disponibilidade</h2>
-                            <p>Preencha os seus dados e confirmamos a sua reserva.</p>
+                            <h2 data-i18n="booking.title">Verificar Disponibilidade</h2>
+                            <p data-i18n="booking.subtitle">Preencha os seus dados e confirmamos a sua reserva.</p>
                         </div>
                         <form class="booking-form" action="#" method="POST">
                             <div class="form-group">
-                                <label for="nome">Nome Completo</label>
-                                <input type="text" id="nome" name="nome" placeholder="Ex: João Silva" required>
+                                <label for="nome" data-i18n="booking.name">Nome Completo</label>
+                                <input type="text" id="nome" name="nome" data-i18n-placeholder="booking.namePlaceholder"
+                                    placeholder="Ex: João Silva" required>
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                                    <label for="email" data-i18n="booking.email">Email</label>
+                                    <input type="email" id="email" name="email"
+                                        data-i18n-placeholder="booking.emailPlaceholder" placeholder="seu@email.com"
+                                        required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="telefone">Telefone</label>
-                                    <input type="tel" id="telefone" name="telefone" placeholder="9xx xxx xxx" required>
+                                    <label for="telefone" data-i18n="booking.phone">Telefone</label>
+                                    <input type="tel" id="telefone" name="telefone"
+                                        data-i18n-placeholder="booking.phonePlaceholder" placeholder="9xx xxx xxx"
+                                        required>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="entrada">Entrada</label>
+                                    <label for="entrada" data-i18n="booking.checkin">Entrada</label>
                                     <input type="date" id="entrada" name="entrada" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="saida">Saída</label>
+                                    <label for="saida" data-i18n="booking.checkout">Saída</label>
                                     <input type="date" id="saida" name="saida" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="hospedes">Hóspedes</label>
+                                    <label for="hospedes" data-i18n="booking.guests">Hóspedes</label>
                                     <div class="select-wrapper">
                                         <select id="hospedes" name="hospedes" required>
-                                            <option value="" disabled selected hidden>Selecione</option>
-                                            <option value="1">1 Hóspede</option>
-                                            <option value="2">2 Hóspedes</option>
-                                            <option value="3">3 Hóspedes</option>
-                                            <option value="4">4 Hóspedes</option>
-                                            <option value="5">5 Hóspedes</option>
-                                            <option value="6">6 Hóspedes</option>
+                                            <option value="" disabled selected hidden
+                                                data-i18n="booking.guestsPlaceholder">Selecione</option>
+                                            <option value="1" data-i18n="booking.guest1">1 Hóspede</option>
+                                            <option value="2" data-i18n="booking.guest2">2 Hóspedes</option>
+                                            <option value="3" data-i18n="booking.guest3">3 Hóspedes</option>
+                                            <option value="4" data-i18n="booking.guest4">4 Hóspedes</option>
+                                            <option value="5" data-i18n="booking.guest5">5 Hóspedes</option>
+                                            <option value="6" data-i18n="booking.guest6">6 Hóspedes</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="mensagem">Mensagem (opcional)</label>
+                                <label for="mensagem" data-i18n="booking.message">Mensagem (opcional)</label>
                                 <textarea id="mensagem" name="mensagem" rows="4"
+                                    data-i18n-placeholder="booking.messagePlaceholder"
                                     placeholder="Algum pedido especial ou dúvida?"></textarea>
                             </div>
-                            <button type="submit" class="btn-submit">Pedir Reserva</button>
+                            <button type="submit" class="btn-submit" data-i18n="booking.submit">Pedir Reserva</button>
                         </form>
                     </div>
                 </div>
@@ -200,86 +186,84 @@
 
         <section class="things">
             <div class="card"><img src="assets/medal.svg" height="20" alt="">
-                <p>Hotel 3 Estrelas</p>
+                <p data-i18n="things.stars">Hotel 3 Estrelas</p>
             </div>
             <div class="card"><img src="assets/star-em.svg" height="20" alt="">
-                <p>Nota 4.0 no Google</p>
+                <p data-i18n="things.rating">Nota 4.0 no Google</p>
             </div>
             <div class="card"><img src="assets/message.svg" height="20" alt="">
-                <p>+1.000 Avaliações</p>
+                <p data-i18n="things.reviews">+1.000 Avaliações</p>
             </div>
             <div class="card"><img src="assets/wifi.svg" height="20" alt="">
-                <p>Wi-Fi Gratuito</p>
+                <p data-i18n="things.wifi">Wi-Fi Gratuito</p>
             </div>
             <div class="card"><img src="assets/car.svg" height="20" alt="">
-                <p>Estacionamento Grátis</p>
+                <p data-i18n="things.parking">Estacionamento Grátis</p>
             </div>
             <div class="card"><img src="assets/location.svg" height="20" alt="">
-                <p>Centro de Covilhã</p>
+                <p data-i18n="things.location">Centro de Covilhã</p>
             </div>
         </section>
 
         <section id="services">
-            <p class="services_title">Os Nossos Serviços</p>
-            <h2 class="services_subtitle">Tudo o Que Precisa para uma Estadia Perfeita</h2>
-            <p class="service_desc">De quartos confortáveis a refeições saborosas e comodidades práticas — pensámos em
-                tudo para que apenas precise de relaxar.</p>
+            <p class="services_title" data-i18n="services.tagline">Os Nossos Serviços</p>
+            <h2 class="services_subtitle" data-i18n="services.title">Tudo o Que Precisa para uma Estadia Perfeita</h2>
+            <p class="service_desc" data-i18n="services.desc">De quartos confortáveis a refeições saborosas e
+                comodidades práticas — pensámos em tudo para que apenas precise de relaxar.</p>
 
             <div class="cards-service">
                 <div class="card-service">
                     <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=870&auto=format&fit=crop"
                         alt="Alojamento">
                     <div class="content">
-                        <h3>Alojamento Confortável</h3>
-                        <p>Quartos limpos e climatizados pensados para um descanso verdadeiro — seja para um fim de
-                            semana
-                            ou uma estadia mais longa.</p>
+                        <h3 data-i18n="services.accommodation">Alojamento Confortável</h3>
+                        <p data-i18n="services.accommodationDesc">Quartos limpos e climatizados pensados para um
+                            descanso verdadeiro — seja para um fim de semana ou uma estadia mais longa.</p>
                     </div>
                 </div>
                 <div class="card-service">
                     <img src="https://images.unsplash.com/photo-1504708706948-13d6cbba4062?q=80&w=870&auto=format&fit=crop"
                         alt="Pequeno-almoço">
                     <div class="content">
-                        <h3>Pequeno-Almoço</h3>
-                        <p>Comece o dia com uma mesa generosa de pão fresco, pastéis, queijos regionais e café quente.
-                        </p>
+                        <h3 data-i18n="services.breakfast">Pequeno-Almoço</h3>
+                        <p data-i18n="services.breakfastDesc">Comece o dia com uma mesa generosa de pão fresco, pastéis,
+                            queijos regionais e café quente.</p>
                     </div>
                 </div>
                 <div class="card-service">
                     <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=870&auto=format&fit=crop"
                         alt="Wi-Fi">
                     <div class="content">
-                        <h3>Wi-Fi Gratuito</h3>
-                        <p>Mantenha-se ligado em todo o hotel com Wi-Fi de alta velocidade gratuito em todos os quartos
-                            e
-                            áreas comuns.</p>
+                        <h3 data-i18n="services.wifi">Wi-Fi Gratuito</h3>
+                        <p data-i18n="services.wifiDesc">Mantenha-se ligado em todo o hotel com Wi-Fi de alta velocidade
+                            gratuito em todos os quartos e áreas comuns.</p>
                     </div>
                 </div>
                 <div class="card-service">
                     <img src="https://images.unsplash.com/photo-1621929747188-0b4dc28498d2?q=80&w=1032&auto=format&fit=crop"
                         alt="Estacionamento">
                     <div class="content">
-                        <h3>Estacionamento Grátis</h3>
-                        <p>Chegue sem preocupações com estacionamento gratuito no hotel — sem custos extra, sem stress.
-                        </p>
+                        <h3 data-i18n="services.parking">Estacionamento Grátis</h3>
+                        <p data-i18n="services.parkingDesc">Chegue sem preocupações com estacionamento gratuito no hotel
+                            — sem custos extra, sem stress.</p>
                     </div>
                 </div>
                 <div class="card-service">
                     <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=870&auto=format&fit=crop"
                         alt="Restaurante">
                     <div class="content">
-                        <h3>Restaurante no Hotel</h3>
-                        <p>O Restaurante Solneve serve refeições portuguesas reconfortantes num ambiente descontraído e
-                            acolhedor.</p>
+                        <h3 data-i18n="services.restaurant">Restaurante no Hotel</h3>
+                        <p data-i18n="services.restaurantDesc">O Restaurante Solneve serve refeições portuguesas
+                            reconfortantes num ambiente descontraído e acolhedor.</p>
                     </div>
                 </div>
                 <div class="card-service">
                     <img src="https://images.unsplash.com/photo-1545483656-1a34ae73add1?q=80&w=870&auto=format&fit=crop"
                         alt="Acessibilidade">
                     <div class="content">
-                        <h3>Instalações Acessíveis</h3>
-                        <p>Comprometidos com o conforto de todos, dispomos de quartos e instalações acessíveis em todo o
-                            hotel.</p>
+                        <h3 data-i18n="services.accessible">Instalações Acessíveis</h3>
+                        <p data-i18n="services.accessibleDesc">Comprometidos com o conforto de todos, dispomos de
+                            quartos e instalações acessíveis em todo o hotel.</p>
                     </div>
                 </div>
             </div>
@@ -288,8 +272,8 @@
         <section class="gallery-section" id="gallery" aria-label="Galeria do Hotel Solneve">
             <div class="gallery-header">
                 <div class="gallery-header__text anim-up">
-                    <span class="gallery-eyebrow">Galeria</span>
-                    <h2 class="gallery-title">Veja Onde Vai Ficar</h2>
+                    <span class="gallery-eyebrow" data-i18n="gallery.tagline">Galeria</span>
+                    <h2 class="gallery-title" data-i18n="gallery.title">Veja Onde Vai Ficar</h2>
                 </div>
                 <div class="gallery-arrows anim-up">
                     <button class="gallery-arrow" onclick="scrollGallery(-1)" aria-label="Anterior">
@@ -377,94 +361,93 @@
             <div class="whyus-container">
                 <div class="whyus-grid">
                     <div class="whyus-left anim-up">
-                        <span class="whyus-eyebrow">Porquê Nós</span>
-                        <h2 class="whyus-title">Muito Mais do que um Lugar para Dormir</h2>
-                        <p class="whyus-subtitle">O Hotel Solneve não é só alojamento — é uma base confortável no
-                            coração de uma das regiões montanhosas mais bonitas de Portugal. Eis porque os nossos
-                            hóspedes continuam a voltar.</p>
+                        <span class="whyus-eyebrow" data-i18n="whyUs.tagline">Porquê Nós</span>
+                        <h2 class="whyus-title" data-i18n="whyUs.title">Muito Mais do que um Lugar para Dormir</h2>
+                        <p class="whyus-subtitle" data-i18n="whyUs.subtitle">O Hotel Solneve não é só alojamento — é uma
+                            base confortável no coração de uma das regiões montanhosas mais bonitas de Portugal. Eis
+                            porque os nossos hóspedes continuam a voltar.</p>
                         <div class="whyus-list">
                             <div class="whyus-item anim-up">
-                                <div class="whyus-icon" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor"
-                                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <div class="whyus-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18"
+                                        height="18" stroke="currentColor" stroke-width="2" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                                         <circle cx="12" cy="10" r="3" />
-                                    </svg>
-                                </div>
+                                    </svg></div>
                                 <div>
-                                    <h3 class="whyus-item-title">Localização Central em Covilhã</h3>
-                                    <p class="whyus-item-desc">A poucos passos dos melhores restaurantes, lojas e
-                                        atrações — tudo ao seu alcance.</p>
+                                    <h3 class="whyus-item-title" data-i18n="whyUs.location">Localização Central em
+                                        Covilhã</h3>
+                                    <p class="whyus-item-desc" data-i18n="whyUs.locationDesc">A poucos passos dos
+                                        melhores restaurantes, lojas e atrações — tudo ao seu alcance.</p>
                                 </div>
                             </div>
                             <div class="whyus-item anim-up">
-                                <div class="whyus-icon" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor"
-                                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <div class="whyus-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18"
+                                        height="18" stroke="currentColor" stroke-width="2" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M8 3l4 8 5-5 5 15H2L8 3z" />
-                                    </svg>
-                                </div>
+                                    </svg></div>
                                 <div>
-                                    <h3 class="whyus-item-title">Porta de Entrada para a Serra da Estrela</h3>
-                                    <p class="whyus-item-desc">A base perfeita para explorar a mais bela cordilheira
-                                        montanhosa de Portugal.</p>
+                                    <h3 class="whyus-item-title" data-i18n="whyUs.mountain">Porta de Entrada para a
+                                        Serra da Estrela</h3>
+                                    <p class="whyus-item-desc" data-i18n="whyUs.mountainDesc">A base perfeita para
+                                        explorar a mais bela cordilheira montanhosa de Portugal.</p>
                                 </div>
                             </div>
                             <div class="whyus-item anim-up">
-                                <div class="whyus-icon" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor"
-                                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <div class="whyus-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18"
+                                        height="18" stroke="currentColor" stroke-width="2" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
                                         <rect x="2" y="3" width="20" height="14" rx="2" />
                                         <line x1="8" y1="21" x2="16" y2="21" />
                                         <line x1="12" y1="17" x2="12" y2="21" />
-                                    </svg>
-                                </div>
+                                    </svg></div>
                                 <div>
-                                    <h3 class="whyus-item-title">Excelente Acessibilidade</h3>
-                                    <p class="whyus-item-desc">A apenas 1 km da estação de comboio e a 10 minutos a pé
-                                        da Universidade da Beira Interior.</p>
+                                    <h3 class="whyus-item-title" data-i18n="whyUs.accessibility">Excelente
+                                        Acessibilidade</h3>
+                                    <p class="whyus-item-desc" data-i18n="whyUs.accessibilityDesc">A apenas 1 km da
+                                        estação de comboio e a 10 minutos a pé da Universidade da Beira Interior.</p>
                                 </div>
                             </div>
                             <div class="whyus-item anim-up">
-                                <div class="whyus-icon" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor"
-                                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <div class="whyus-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18"
+                                        height="18" stroke="currentColor" stroke-width="2" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
                                         <path
                                             d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                                    </svg>
-                                </div>
+                                    </svg></div>
                                 <div>
-                                    <h3 class="whyus-item-title">Serviço Acolhedor e Genuíno</h3>
-                                    <p class="whyus-item-desc">Hospitalidade portuguesa autêntica — uma equipa simpática
-                                        que trata cada hóspede como família.</p>
+                                    <h3 class="whyus-item-title" data-i18n="whyUs.service">Serviço Acolhedor e Genuíno
+                                    </h3>
+                                    <p class="whyus-item-desc" data-i18n="whyUs.serviceDesc">Hospitalidade portuguesa
+                                        autêntica — uma equipa simpática que trata cada hóspede como família.</p>
                                 </div>
                             </div>
                             <div class="whyus-item anim-up">
-                                <div class="whyus-icon" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor"
-                                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <div class="whyus-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18"
+                                        height="18" stroke="currentColor" stroke-width="2" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                                         <polyline points="9 22 9 12 15 12 15 22" />
-                                    </svg>
-                                </div>
+                                    </svg></div>
                                 <div>
-                                    <h3 class="whyus-item-title">Quartos Confortáveis</h3>
-                                    <p class="whyus-item-desc">Quartos limpos e climatizados com tudo o que precisa para
-                                        uma noite de descanso.</p>
+                                    <h3 class="whyus-item-title" data-i18n="whyUs.rooms">Quartos Confortáveis</h3>
+                                    <p class="whyus-item-desc" data-i18n="whyUs.roomsDesc">Quartos limpos e climatizados
+                                        com tudo o que precisa para uma noite de descanso.</p>
                                 </div>
                             </div>
                             <div class="whyus-item anim-up">
-                                <div class="whyus-icon" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor"
-                                        stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <div class="whyus-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18"
+                                        height="18" stroke="currentColor" stroke-width="2" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
                                         <line x1="12" y1="1" x2="12" y2="23" />
                                         <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                                    </svg>
-                                </div>
+                                    </svg></div>
                                 <div>
-                                    <h3 class="whyus-item-title">Excelente Relação Qualidade-Preço</h3>
-                                    <p class="whyus-item-desc">Alojamento de qualidade, pequeno-almoço e comodidades —
-                                        tudo a um preço que faz sentido.</p>
+                                    <h3 class="whyus-item-title" data-i18n="whyUs.value">Excelente Relação
+                                        Qualidade-Preço</h3>
+                                    <p class="whyus-item-desc" data-i18n="whyUs.valueDesc">Alojamento de qualidade,
+                                        pequeno-almoço e comodidades — tudo a um preço que faz sentido.</p>
                                 </div>
                             </div>
                         </div>
@@ -498,25 +481,22 @@
                             </div>
                             <div class="rating-info">
                                 <div class="rating-score">4.0</div>
-                                <div class="rating-label">Nota Google</div>
-                                <div class="rating-count">+1.000 Avaliações</div>
+                                <div class="rating-label" data-i18n="whyUs.ratingLabel">Nota Google</div>
+                                <div class="rating-count" data-i18n="whyUs.reviews">+1.000 Avaliações</div>
                             </div>
                         </div>
                     </div>
                     <div class="whyus-right anim-up">
                         <div class="whyus-img-grid">
-                            <div class="whyus-img whyus-img--wide">
-                                <img src="https://media.base44.com/images/public/6a3011cfcad450b5ebdf8c05/8a9afe0d5_generated_5e21dd72.png"
-                                    alt="Receção do Hotel Solneve" loading="lazy">
-                            </div>
-                            <div class="whyus-img">
-                                <img src="https://media.base44.com/images/public/6a3011cfcad450b5ebdf8c05/439118c75_generated_7aac1fb5.png"
-                                    alt="Serra da Estrela" loading="lazy">
-                            </div>
-                            <div class="whyus-img">
-                                <img src="https://media.base44.com/images/public/6a3011cfcad450b5ebdf8c05/e09443f95_generated_89c65484.png"
-                                    alt="Vista de Covilhã" loading="lazy">
-                            </div>
+                            <div class="whyus-img whyus-img--wide"><img
+                                    src="https://media.base44.com/images/public/6a3011cfcad450b5ebdf8c05/8a9afe0d5_generated_5e21dd72.png"
+                                    alt="Receção" loading="lazy"></div>
+                            <div class="whyus-img"><img
+                                    src="https://media.base44.com/images/public/6a3011cfcad450b5ebdf8c05/439118c75_generated_7aac1fb5.png"
+                                    alt="Serra da Estrela" loading="lazy"></div>
+                            <div class="whyus-img"><img
+                                    src="https://media.base44.com/images/public/6a3011cfcad450b5ebdf8c05/e09443f95_generated_89c65484.png"
+                                    alt="Covilhã" loading="lazy"></div>
                         </div>
                     </div>
                 </div>
@@ -526,104 +506,90 @@
         <section class="faq-section" id="faq" aria-label="Perguntas frequentes">
             <div class="faq-container">
                 <div class="faq-header anim-up">
-                    <span class="faq-eyebrow">Perguntas Frequentes</span>
-                    <h2 class="faq-title">Dúvidas Mais Comuns</h2>
-                    <p class="faq-subtitle">Tudo o que precisa de saber antes da sua estadia.</p>
+                    <span class="faq-eyebrow" data-i18n="faq.tagline">Perguntas Frequentes</span>
+                    <h2 class="faq-title" data-i18n="faq.title">Dúvidas Mais Comuns</h2>
+                    <p class="faq-subtitle" data-i18n="faq.subtitle">Tudo o que precisa de saber antes da sua estadia.
+                    </p>
                 </div>
                 <div class="faq-list anim-up">
-                    <div class="faq-item">
-                        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
-                            <span>Quais são os horários de check-in e check-out?</span>
-                            <span class="faq-trigger__icon"><svg viewBox="0 0 24 24">
+                    <div class="faq-item"><button class="faq-trigger" aria-expanded="false"
+                            onclick="toggleFaq(this)"><span data-i18n="faq.q1">Quais são os horários de check-in e
+                                check-out?</span><span class="faq-trigger__icon"><svg viewBox="0 0 24 24">
                                     <polyline points="6 9 12 15 18 9" />
-                                </svg></span>
-                        </button>
+                                </svg></span></button>
                         <div class="faq-body">
-                            <p>O check-in é a partir das 14h00 e o check-out até às 12h00. Se precisar de horários
-                                diferentes, contacte-nos com antecedência.</p>
+                            <p data-i18n="faq.a1">O check-in é a partir das 14h00 e o check-out até às 12h00. Se
+                                precisar de horários diferentes, contacte-nos com antecedência.</p>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
-                            <span>Existe estacionamento disponível no hotel?</span>
-                            <span class="faq-trigger__icon"><svg viewBox="0 0 24 24">
+                    <div class="faq-item"><button class="faq-trigger" aria-expanded="false"
+                            onclick="toggleFaq(this)"><span data-i18n="faq.q2">Existe estacionamento disponível no
+                                hotel?</span><span class="faq-trigger__icon"><svg viewBox="0 0 24 24">
                                     <polyline points="6 9 12 15 18 9" />
-                                </svg></span>
-                        </button>
+                                </svg></span></button>
                         <div class="faq-body">
-                            <p>Sim, disponibilizamos estacionamento gratuito para todos os nossos hóspedes, sem custos
-                                adicionais.</p>
+                            <p data-i18n="faq.a2">Sim, disponibilizamos estacionamento gratuito para todos os nossos
+                                hóspedes, sem custos adicionais.</p>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
-                            <span>O pequeno-almoço está incluído no preço do quarto?</span>
-                            <span class="faq-trigger__icon"><svg viewBox="0 0 24 24">
+                    <div class="faq-item"><button class="faq-trigger" aria-expanded="false"
+                            onclick="toggleFaq(this)"><span data-i18n="faq.q3">O pequeno-almoço está incluído no preço
+                                do quarto?</span><span class="faq-trigger__icon"><svg viewBox="0 0 24 24">
                                     <polyline points="6 9 12 15 18 9" />
-                                </svg></span>
-                        </button>
+                                </svg></span></button>
                         <div class="faq-body">
-                            <p>Sim, o pequeno-almoço está incluído na maioria das nossas tarifas. Inclui pão fresco,
-                                pastéis, queijos regionais e café quente.</p>
+                            <p data-i18n="faq.a3">Sim, o pequeno-almoço está incluído na maioria das nossas tarifas.
+                                Inclui pão fresco, pastéis, queijos regionais e café quente.</p>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
-                            <span>A que distância fica o hotel da Serra da Estrela?</span>
-                            <span class="faq-trigger__icon"><svg viewBox="0 0 24 24">
+                    <div class="faq-item"><button class="faq-trigger" aria-expanded="false"
+                            onclick="toggleFaq(this)"><span data-i18n="faq.q4">A que distância fica o hotel da Serra da
+                                Estrela?</span><span class="faq-trigger__icon"><svg viewBox="0 0 24 24">
                                     <polyline points="6 9 12 15 18 9" />
-                                </svg></span>
-                        </button>
+                                </svg></span></button>
                         <div class="faq-body">
-                            <p>Estamos a cerca de 20 minutos de carro da Torre, o ponto mais alto da Serra da Estrela.
-                            </p>
+                            <p data-i18n="faq.a4">Estamos a cerca de 20 minutos de carro da Torre, o ponto mais alto da
+                                Serra da Estrela.</p>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
-                            <span>O hotel fica perto de transportes públicos?</span>
-                            <span class="faq-trigger__icon"><svg viewBox="0 0 24 24">
+                    <div class="faq-item"><button class="faq-trigger" aria-expanded="false"
+                            onclick="toggleFaq(this)"><span data-i18n="faq.q5">O hotel fica perto de transportes
+                                públicos?</span><span class="faq-trigger__icon"><svg viewBox="0 0 24 24">
                                     <polyline points="6 9 12 15 18 9" />
-                                </svg></span>
-                        </button>
+                                </svg></span></button>
                         <div class="faq-body">
-                            <p>Sim, a apenas 1 km da estação de comboio de Covilhã. A Universidade da Beira Interior
-                                fica a 10 minutos a pé.</p>
+                            <p data-i18n="faq.a5">Sim, a apenas 1 km da estação de comboio de Covilhã. A Universidade da
+                                Beira Interior fica a 10 minutos a pé.</p>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
-                            <span>Dispõem de quartos acessíveis?</span>
-                            <span class="faq-trigger__icon"><svg viewBox="0 0 24 24">
+                    <div class="faq-item"><button class="faq-trigger" aria-expanded="false"
+                            onclick="toggleFaq(this)"><span data-i18n="faq.q6">Dispõem de quartos
+                                acessíveis?</span><span class="faq-trigger__icon"><svg viewBox="0 0 24 24">
                                     <polyline points="6 9 12 15 18 9" />
-                                </svg></span>
-                        </button>
+                                </svg></span></button>
                         <div class="faq-body">
-                            <p>Sim, temos quartos e instalações adaptadas para hóspedes com mobilidade reduzida.</p>
+                            <p data-i18n="faq.a6">Sim, temos quartos e instalações adaptadas para hóspedes com
+                                mobilidade reduzida.</p>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
-                            <span>Posso jantar no hotel?</span>
-                            <span class="faq-trigger__icon"><svg viewBox="0 0 24 24">
+                    <div class="faq-item"><button class="faq-trigger" aria-expanded="false"
+                            onclick="toggleFaq(this)"><span data-i18n="faq.q7">Posso jantar no hotel?</span><span
+                                class="faq-trigger__icon"><svg viewBox="0 0 24 24">
                                     <polyline points="6 9 12 15 18 9" />
-                                </svg></span>
-                        </button>
+                                </svg></span></button>
                         <div class="faq-body">
-                            <p>O Restaurante Solneve serve refeições portuguesas reconfortantes num ambiente
-                                descontraído.</p>
+                            <p data-i18n="faq.a7">O Restaurante Solneve serve refeições portuguesas reconfortantes num
+                                ambiente descontraído.</p>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-trigger" aria-expanded="false" onclick="toggleFaq(this)">
-                            <span>Como posso fazer uma reserva?</span>
-                            <span class="faq-trigger__icon"><svg viewBox="0 0 24 24">
+                    <div class="faq-item"><button class="faq-trigger" aria-expanded="false"
+                            onclick="toggleFaq(this)"><span data-i18n="faq.q8">Como posso fazer uma reserva?</span><span
+                                class="faq-trigger__icon"><svg viewBox="0 0 24 24">
                                     <polyline points="6 9 12 15 18 9" />
-                                </svg></span>
-                        </button>
+                                </svg></span></button>
                         <div class="faq-body">
-                            <p>Pode reservar por telefone (+351 275 323 001), website ou email. Reservar direto garante
-                                a melhor tarifa.</p>
+                            <p data-i18n="faq.a8">Pode reservar por telefone (+351 275 323 001), website ou email.
+                                Reservar direto garante a melhor tarifa.</p>
                         </div>
                     </div>
                 </div>
@@ -631,26 +597,25 @@
         </section>
 
         <section class="cta-section" id="contact" aria-label="Reservar estadia no Hotel Solneve">
-            <div class="cta-bg">
-                <img src="https://media.base44.com/images/public/6a3011cfcad450b5ebdf8c05/b931c5aff_generated_aadb25d9.png"
-                    alt="Pôr do sol na Serra da Estrela" loading="lazy">
-            </div>
+            <div class="cta-bg"><img
+                    src="https://media.base44.com/images/public/6a3011cfcad450b5ebdf8c05/b931c5aff_generated_aadb25d9.png"
+                    alt="Pôr do sol na Serra da Estrela" loading="lazy"></div>
             <div class="cta-inner anim-up">
-                <h2 class="cta-title">O Seu Refúgio na Montanha Espera por Si</h2>
-                <p class="cta-subtitle">Reserve diretamente connosco para obter a melhor tarifa e um serviço
-                    personalizado. Garantimos que a sua estadia em Covilhã será inesquecível.</p>
+                <h2 class="cta-title" data-i18n="cta.title">O Seu Refúgio na Montanha Espera por Si</h2>
+                <p class="cta-subtitle" data-i18n="cta.subtitle">Reserve diretamente connosco para obter a melhor tarifa
+                    e um serviço personalizado. Garantimos que a sua estadia em Covilhã será inesquecível.</p>
                 <div class="cta-buttons">
-                    <button class="btn btn-primary" onclick="scrollToSection(event,'#hero')">Reserve a Sua
-                        Estadia</button>
+                    <button class="btn btn-primary" onclick="scrollToSection(event,'#hero')"
+                        data-i18n="cta.book">Reserve a Sua Estadia</button>
                     <a href="tel:+351275323001" class="btn btn-glass"><svg viewBox="0 0 24 24">
                             <path
                                 d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72c.13.9.37 1.77.72 2.61a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.84.35 1.71.59 2.61.72A2 2 0 0 1 21.57 16.92z" />
-                        </svg>Ligar Agora</a>
+                        </svg><span data-i18n="cta.call">Ligar Agora</span></a>
                     <a href="https://maps.google.com/?q=Hotel+Solneve+Covilhã" target="_blank" rel="noopener noreferrer"
                         class="btn btn-glass"><svg viewBox="0 0 24 24">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                             <circle cx="12" cy="10" r="3" />
-                        </svg>Como Chegar</a>
+                        </svg><span data-i18n="cta.directions">Como Chegar</span></a>
                 </div>
             </div>
         </section>
@@ -658,39 +623,41 @@
         <footer class="footer" aria-label="Rodapé do Hotel Solneve">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <div class="footer-brand">Hotel Solneve</div>
-                    <p class="footer-desc">Um hotel 3 estrelas acolhedor ao pé da Serra da Estrela, no coração de
-                        Covilhã, Portugal.</p>
-                    <div class="footer-hours">
-                        <svg viewBox="0 0 24 24">
+                    <div class="footer-brand" data-i18n="nav.brand">Hotel Solneve</div>
+                    <p class="footer-desc" data-i18n="footer.desc">Um hotel 3 estrelas acolhedor ao pé da Serra da
+                        Estrela, no coração de Covilhã, Portugal.</p>
+                    <div class="footer-hours"><svg viewBox="0 0 24 24">
                             <circle cx="12" cy="12" r="10" />
                             <polyline points="12 6 12 12 16 14" />
-                        </svg>
-                        <span>Entrada 14h00 · Saída 12h00</span>
-                    </div>
+                        </svg><span data-i18n="footer.hours">Entrada 14h00 · Saída 12h00</span></div>
                 </div>
                 <div class="footer-col">
-                    <h4 class="footer-heading">Links Rápidos</h4>
+                    <h4 class="footer-heading" data-i18n="footer.quickLinks">Links Rápidos</h4>
                     <ul class="footer-links">
-                        <li><button onclick="scrollToSection(event,'#services')">Serviços</button></li>
-                        <li><button onclick="scrollToSection(event,'#why-us')">Porquê Nós</button></li>
-                        <li><button onclick="scrollToSection(event,'#gallery')">Galeria</button></li>
-                        <li><button onclick="scrollToSection(event,'#faq')">FAQ</button></li>
-                        <li><button onclick="scrollToSection(event,'#hero')">Reservar Quarto</button></li>
+                        <li><button onclick="scrollToSection(event,'#services')"
+                                data-i18n="nav.services">Serviços</button></li>
+                        <li><button onclick="scrollToSection(event,'#why-us')" data-i18n="nav.whyUs">Porquê Nós</button>
+                        </li>
+                        <li><button onclick="scrollToSection(event,'#gallery')" data-i18n="nav.gallery">Galeria</button>
+                        </li>
+                        <li><button onclick="scrollToSection(event,'#faq')" data-i18n="nav.faq">FAQ</button></li>
+                        <li><button onclick="scrollToSection(event,'#hero')" data-i18n="cta.book">Reservar
+                                Quarto</button></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4 class="footer-heading">Contacto</h4>
+                    <h4 class="footer-heading" data-i18n="footer.contact">Contacto</h4>
                     <ul class="footer-contact-list">
                         <li><a href="https://maps.google.com/?q=Hotel+Solneve+Covilhã" target="_blank"
                                 rel="noopener noreferrer"><svg viewBox="0 0 24 24">
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                                     <circle cx="12" cy="10" r="3" />
-                                </svg>Rua Visconde de Coriscada 126,<br>6200-077 Covilhã, Portugal</a></li>
+                                </svg><span data-i18n="footer.address">Rua Visconde de Coriscada 126,<br>6200-077
+                                    Covilhã, Portugal</span></a></li>
                         <li><a href="tel:+351275323001"><svg viewBox="0 0 24 24">
                                     <path
                                         d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.26h3a2 2 0 0 1 2 1.72c.13.9.37 1.77.72 2.61a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.84.35 1.71.59 2.61.72A2 2 0 0 1 21.57 16.92z" />
-                                </svg>+351 275 323 001</a></li>
+                                </svg><span data-i18n="nav.phone">+351 275 323 001</span></a></li>
                         <li><a href="https://hotelsolneve.pt" target="_blank" rel="noopener noreferrer"><svg
                                     viewBox="0 0 24 24">
                                     <circle cx="12" cy="12" r="10" />
@@ -701,20 +668,21 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4 class="footer-heading">Como Chegar</h4>
-                    <p style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.7;margin-bottom:14px;">
-                        Localizado no centro de Covilhã, a 1 km da estação de comboio e a 10 minutos a pé da
-                        universidade.</p>
+                    <h4 class="footer-heading" data-i18n="footer.directionsTitle">Como Chegar</h4>
+                    <p style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.7;margin-bottom:14px;"
+                        data-i18n="footer.directionsText">Localizado no centro de Covilhã, a 1 km da estação de comboio
+                        e a 10 minutos a pé da universidade.</p>
                     <a href="https://maps.google.com/?q=Hotel+Solneve+Covilhã" target="_blank" rel="noopener noreferrer"
                         class="btn btn-glass" style="font-size:13px;padding:10px 18px;min-height:auto;"><svg
                             viewBox="0 0 24 24" style="width:14px;height:14px;">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                             <polyline points="15 3 21 3 21 9" />
                             <line x1="10" y1="14" x2="21" y2="3" />
-                        </svg>Abrir no Google Maps</a>
+                        </svg><span data-i18n="footer.openMaps">Abrir no Google Maps</span></a>
                 </div>
             </div>
-            <div class="footer-bottom">© 2026 Hotel Solneve. Todos os direitos reservados.</div>
+            <div class="footer-bottom" data-i18n="footer.copyright">© 2026 Hotel Solneve. Todos os direitos reservados.
+            </div>
         </footer>
     </main>
 

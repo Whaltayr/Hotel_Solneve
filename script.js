@@ -1,4 +1,65 @@
 /* ═══════════════════════════════════════
+   I18N — LANGUAGE SYSTEM
+═══════════════════════════════════════ */
+let currentTranslations = {};
+let currentLang = localStorage.getItem('solneve-lang') || 'pt';
+
+async function loadLanguage(lang) {
+  try {
+    const res = await fetch(`lang/${lang}.json`);
+    if (!res.ok) throw new Error('Failed to load ' + lang);
+    currentTranslations = await res.json();
+    applyTranslations();
+    setActiveLangUI(lang);
+    currentLang = lang;
+    localStorage.setItem('solneve-lang', lang);
+    document.documentElement.lang = lang === 'pt' ? 'pt' : lang === 'en' ? 'en' : 'fr';
+  } catch (err) {
+    console.error('i18n error:', err);
+  }
+}
+
+function applyTranslations() {
+  // Text content
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (currentTranslations[key]) {
+      el.textContent = currentTranslations[key];
+    }
+  });
+  // Placeholders
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (currentTranslations[key]) {
+      el.placeholder = currentTranslations[key];
+    }
+  });
+  // Select options
+  document.querySelectorAll('select option[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (currentTranslations[key]) {
+      el.textContent = currentTranslations[key];
+    }
+  });
+}
+
+function setActiveLangUI(lang) {
+  document.querySelectorAll('.lang-option').forEach(opt => {
+    opt.classList.toggle('is-active', opt.dataset.lang === lang);
+  });
+  const label = document.getElementById('currentLang');
+  const mobileLabel = document.getElementById('currentLangMobile');
+  if (label) label.textContent = lang.toUpperCase();
+  if (mobileLabel) mobileLabel.textContent = lang.toUpperCase();
+}
+
+function setLang(code) {
+  if (code === currentLang) return;
+  loadLanguage(code);
+  closeAllLangs();
+}
+
+/* ═══════════════════════════════════════
    NAVBAR SCROLL
 ═══════════════════════════════════════ */
 const navbar = document.getElementById('navbar');
@@ -66,25 +127,9 @@ function closeAllLangs() {
 }
 
 document.addEventListener('click', () => closeAllLangs());
-
 [langDropdown, langDropdownMobile].forEach(dd => {
   if (dd) dd.addEventListener('click', e => e.stopPropagation());
 });
-
-function setLang(code) {
-  document.querySelectorAll('.lang-option').forEach(opt => {
-    opt.classList.toggle('is-active', opt.dataset.lang === code);
-  });
-  const label = document.getElementById('currentLang');
-  const mobileLabel = document.getElementById('currentLangMobile');
-  if (label) label.textContent = code.toUpperCase();
-  if (mobileLabel) mobileLabel.textContent = code.toUpperCase();
-  closeAllLangs();
-  localStorage.setItem('solneve-lang', code);
-}
-
-const savedLang = localStorage.getItem('solneve-lang');
-if (savedLang) setLang(savedLang);
 
 /* ═══════════════════════════════════════
    SMOOTH SCROLL
@@ -136,3 +181,8 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.anim-up').forEach(el => observer.observe(el));
+
+/* ═══════════════════════════════════════
+   INIT
+═══════════════════════════════════════ */
+loadLanguage(currentLang);
